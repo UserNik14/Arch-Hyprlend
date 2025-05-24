@@ -13,9 +13,11 @@
 
     ],
     "modules-center": [
+
       "hyprland/window",
       "custom/cava_mviz",
     ],
+
     "modules-right": [
 
     "idle_inhibitor",
@@ -48,7 +50,7 @@
       },
       "sort-by-number": true,
       "persistent-workspaces": {
-        "*": 5, // 5 workspaces by default on every monitor
+        "*": 9, // 5 workspaces by default on every monitor
         "HDMI-A-1": 3 // but only three on HDMI-A-1
       },
     },
