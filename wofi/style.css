@@ -43,8 +43,11 @@ window {
 #text:selected {
   color: #1a1b26;
 }
-#entry:selected {
+##entry:selected {
   background: linear-gradient(90deg, #90cdfa 0%, #b69bf1 80%);
+}
+#entry:selected {
+background: linear-gradient(90deg, #dda0dd 0%, #b69bf1 80%);
 }
 
 
