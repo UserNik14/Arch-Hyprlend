@@ -1,12 +1,13 @@
 {
   "position": "top",
-    "margin-top" : 2,
+    "margin-top" : 5,
     "margin-left": 10,
     "margin-right": 10,
     "height" : 28,
     "modules-left": [
     "custom/arch",
     "hyprland/workspaces",
+    "custom/updates",
     "network",
 
 
@@ -80,7 +81,7 @@
       "format-icons": ["", "", "", "", ""]
     },
     "network": {
-      "format-wifi": " {signalStrength}% Down:{bandwidthDownBits} Up:{bandwidthUpBytes}",
+      "format-wifi": " {signalStrength}% ▼ Down:{bandwidthDownBits} ▲ Up:{bandwidthUpBytes}",
       "format-ethernet": "{cidr}  Speed:{bandwidthDownBits} {bandwidthUpBytes}",
       "tooltip-format": "{ifname} via {gwaddr} ",
       "format-linked": "{ifname} (No IP) ",
@@ -89,7 +90,7 @@
       "interval": 3,
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
+        "scroll-step": 1, // %, can be a float
         "format": " {icon} {volume}% {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon}
@@ -119,7 +120,8 @@
       "custom/arch": {
         "format":"Apps ",
       "tooltip": false,
-      "on-click": "wofi"
+      "on-click": "wofi",
+      "on-click-right": "killall wofi",
     },
     "custom/calculator": {
         "format": " ",
@@ -186,6 +188,12 @@
             "deactivated": ""
         }
     },
-
+"custom/updates": {
+    "format": "{}",
+    "interval": 30,
+    "exec": "~/.config/waybar/scripts/checkupdate.sh",
+    "return-type": "json",
+    "exec-if": "exit 0",
+  },
 
 }
