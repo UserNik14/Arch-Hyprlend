@@ -12,12 +12,12 @@ window {
 }
 
 #input {
-  background-color: #1a1b26;
+  background-color: #@base
   color: #c0caf5;
   outline: none;
   box-shadow: none;
   border: 0;
-  border-radius: 0;
+  border-radius: 1rem;
   font-size: 1rem;
   padding: 0.5rem;
 }
@@ -43,11 +43,12 @@ window {
 #text:selected {
   color: #1a1b26;
 }
+
 ##entry:selected {
-  background: linear-gradient(90deg, #90cdfa 0%, #b69bf1 80%);
+background: linear-gradient(90deg, #90cdfa 0%, #b69bf1 80%);
 }
+
 #entry:selected {
 background: linear-gradient(90deg, #dda0dd 0%, #b69bf1 80%);
 }
-
 
