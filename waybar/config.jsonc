@@ -185,15 +185,7 @@
         "format": "{icon}",
         "format-icons": {
             "activated": "",
-            "deactivated": ""
-        }
+            "deactivated": "" }
     },
-"custom/updates": {
-    "format": "{}",
-    "interval": 30,
-    "exec": "~/.config/waybar/scripts/checkupdate.sh",
-    "return-type": "json",
-    "exec-if": "exit 0",
-  },
 
 }
