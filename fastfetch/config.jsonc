@@ -118,6 +118,12 @@
             "keyColor": "red"
         },
         {
+            "type": "weather",
+            "timeout": 1000,
+            "key": "  󰋵 Weather",
+            "keyColor": "red"
+        },
+        {
             "type": "custom",
             "format": "└────────────────────────────────────────────────────────┘"
         }
