@@ -3,24 +3,22 @@
     "margin-top" : 5,
     "margin-left": 10,
     "margin-right": 10,
-    "height" : 28,
+    "height" : 41,
     "modules-left": [
     "custom/arch",
     "hyprland/workspaces",
-    "custom/updates",
     "network",
-
-
-
     ],
+
+
     "modules-center": [
 
       "hyprland/window",
       "custom/cava_mviz",
     ],
 
-    "modules-right": [
 
+    "modules-right": [
     "idle_inhibitor",
     "tray",
     "hyprland/language",
@@ -35,14 +33,21 @@
     "clock",
     "custom/exit",
     ],
+
+
     "hyprland/window": {
-      "format": "{}",
+      "format": "{title}",
       "max-length": 35,
+      "icon": true,
+      "icon-size": 20,
+      "tooltip": false,
       "rewrite": {
         "": "Hyprland"
       },
       "separate-outputs": true,
     },
+
+
     "hyprland/workspaces": {
       "format": "{icon}",
       "on-click": "activate",
@@ -55,17 +60,24 @@
         "HDMI-A-1": 3 // but only three on HDMI-A-1
       },
     },
+
+
     "clock": {
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
       "format-alt": "{:%Y-%m-%d}"
     },
+
+
     "cpu": {
       "format": "&#128187; {usage}%",
       "tooltip": true,
       "on-click": "kitty htop",
     },
+
+
     "memory": {
       "format": "&#128190; {}%"
+
 
     },
     "battery": {
@@ -80,6 +92,8 @@
       "format-alt": "{time} {icon}",
       "format-icons": ["", "", "", "", ""]
     },
+
+
     "network": {
       "format-wifi": " {signalStrength}% ▼ Down:{bandwidthDownBits} ▲ Up:{bandwidthUpBytes}",
       "format-ethernet": "{cidr}  Speed:{bandwidthDownBits} {bandwidthUpBytes}",
@@ -89,6 +103,8 @@
       "format-alt": "{ifname}: {ipaddr}/{cidr}/{essid}",
       "interval": 3,
     },
+
+
     "pulseaudio": {
         "scroll-step": 1, // %, can be a float
         "format": " {icon} {volume}% {format_source}",
@@ -111,34 +127,31 @@
 
       },
 
+
     "custom/exit": {
         "format": "",
         "on-click": "wlogout",
         "on-click-right": "hyprlock",
         "tooltip-format": "Left: Power menu\nRight: Lock screen"
       },
+
+
       "custom/arch": {
         "format":"Apps ",
       "tooltip": false,
       "on-click": "wofi",
       "on-click-right": "killall wofi",
     },
-    "custom/calculator": {
-        "format": " ",
-        "on-click": "qalculate-gtk",
-        "tooltip": false
-    },
+
+
     "disk": {
         "interval": 30,
         "format": "&#128191; {percentage_used}%",
         "path": "/",
 
     },
-     "custom/system": {
-        "format": "🧼 ",
-        "tooltip": true,
-        "on-click": "kitty htop",
-    },
+
+
     "temperature": {
         "thermal-zone": 2,
         "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
@@ -146,15 +159,21 @@
         "format": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""]
     },
+
+
     "backlight": {
 	"interval": 2,
 	"align": 0,
 	"rotate": 0,
 	"format": "{icon} {percent}%",
 	"format-icons": ["💡"],
-},
-"hyprland/language": {
-        "format":  " {short}"
+	"tooltip": false,
+    },
+
+
+    "hyprland/language": {
+        "format": "{short}",
+        "tooltip": true,
     },
 
 
@@ -164,28 +183,30 @@
         "tooltip": true,
     },
 
-"custom/bluetooth": {
+    "custom/bluetooth": {
         "format" : "",
 		"tooltip": false,
 		"on-click": "blueberry",
-},
+    },
 
-"tray": {
+     "tray": {
         "icon-size": 21,
         "spacing": 10,
         "tooltip": false,
     },
+
 
 "custom/cava_mviz": {
 	"exec": "$HOME/.config/waybar/WaybarCava.sh",
 	"format": "{}"
 	},
 
+
 "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
             "activated": "",
-            "deactivated": "" }
+            "deactivated": ""
+        }
     },
-
 }
