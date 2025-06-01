@@ -124,8 +124,7 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
-
-      },
+ },
 
 
     "custom/exit": {
@@ -196,17 +195,19 @@
     },
 
 
-"custom/cava_mviz": {
+    "custom/cava_mviz": {
 	"exec": "$HOME/.config/waybar/WaybarCava.sh",
-	"format": "{}"
+	"format": "  {}"
 	},
 
 
-"idle_inhibitor": {
+    "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
             "activated": "",
             "deactivated": ""
         }
     },
+
+
 }
