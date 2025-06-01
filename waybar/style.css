@@ -59,11 +59,8 @@ button:hover {
 #clock,
 #battery,
 #cpu,
-#custom-arch,
 #memory,
 #temperature,
-#custom-system,
-#custom-calculator,
 #network,
 #custom-apps,
 #hyprland-language,
@@ -72,7 +69,6 @@ button:hover {
 #custom-exit,
 #tray,
 #idle-inhibitor,
-#custom-copyq,
 #custom-cava_mviz,
 #backlight,
 #pulseaudio {
@@ -97,28 +93,19 @@ border: 10px solid @base;
 color: @pink;
 }
 
-
-
 #hyprland-language {
   color: @sky;
 }
 
 #custom-apps {
-  color: @white;
+  color: @sky;
 }
 
-#custom-copyq {
-  color: @yellow;
-}
 
 #disk {
   color: @peach;
 }
 
-
-#custom-system {
-  color: @peach;
-}
 
 #custom-bluetooth {
    color: @sky;
@@ -134,9 +121,6 @@ color: @pink;
 
 }
 
-#custom-calculator {
-  color: @green;
-}
 
 #network {
   color: @yellow;
@@ -177,7 +161,7 @@ color: @pink;
 }
 
 .modules-left {
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .modules-center {
