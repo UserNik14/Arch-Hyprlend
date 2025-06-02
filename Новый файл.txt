@@ -4,4 +4,4 @@ papirus-icon-theme
 
 https://github.com/catppuccin/gtk/releases
 
-https://github.com/vinceliuice/Graphite-gtk-theme.git
+https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme.git
