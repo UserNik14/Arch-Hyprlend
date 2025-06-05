@@ -96,7 +96,7 @@
 
 
     "network": {
-      "format-wifi": " {signalStrength}% ▼ Down:{bandwidthDownBits} ▲ Up:{bandwidthUpBytes}",
+      "format-wifi": " {signalStrength}% ▼ Down:{bandwidthDownBytes} ▲ Up:{bandwidthUpBytes}",
       "format-ethernet": "{cidr}  Speed:{bandwidthDownBits} {bandwidthUpBytes}",
       "tooltip-format": "{ifname} via {gwaddr} ",
       "format-linked": "{ifname} (No IP) ",
