@@ -1,0 +1,47 @@
+###WI-FI
+nmcli device wifi list
+nmcli device wifi list connect сеть password пароль
+
+###AUR
+sudo pacman -S git base-devel
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepg -si
+
+###Shell
+chsh
+/bin/fish
+
+###sudo pacman -S thunar git waybar hyprpaper fish hyprlock blueberry fastfetch copyq cava kate pavucontrol bleachbit nwg-look thunar-volman pacman-contrib partitionmanager brightnessctl gthumb vlc ark gvfs kdeconnect timeshift ttf-font-awesome otf-font-awesome ttf-jetbrains-mono papirus-icon-theme
+
+### yay -S wlogout google-chrome
+
+
+###шрифты
+ttf-font-awesome otf-font-awesome ttf-jetbrains-mono
+
+
+###Icon
+papirus-icon-theme
+
+###Releases Catppuccin
+https://github.com/catppuccin/gtk/releases
+
+###Themes
+https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme.git
+
+###Catppuccin cursor themes
+yay -S catppuccin-cursors-latte
+yay -S catppuccin-cursors-frappe
+yay -S catppuccin-cursors-macchiato
+yay -S catppuccin-cursors-mocha
+
+###Color-Floders_thunar
+wget -qO- https://git.io/papirus-folders-install | sh
+
+###Show the current color and available colors for Papirus-Dark
+papirus-folders -l --theme Papirus-Dark
+
+
+####Change color of folders to brown for Papirus-Dark
+papirus-folders -C brown --theme Papirus-Dark
