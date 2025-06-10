@@ -337,6 +337,11 @@
     # where there are multiple screens with very different dpi values.
     per_monitor_dpi = false
 
+global]
+    frame_color = "#cba6f7"
+    separator_color= frame
+    highlight = "#8aadf4"
+
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
