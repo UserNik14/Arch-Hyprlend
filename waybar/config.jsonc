@@ -1,5 +1,6 @@
 {
-  "position": "top",
+"layer": "top",
+"position": "top",
     "margin-top" : 5,
     "margin-left": 5,
     "margin-right": 5,
@@ -69,20 +70,6 @@
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
       "format-alt": "{:%Y-%m-%d}"
     },
-
-
-
-
-    "clock2": {
-        "format": "  {:%b %d |   %I:%M %p}",
-        "on-click": "gnome-calendar",
-        "on-click-right": "gnome-clocks",
-        "tooltip": false
-    },
-
-
-
-
 
 
     "cpu": {
