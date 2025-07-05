@@ -67,6 +67,7 @@ button:hover {
 #custom-bluetooth,
 #disk,
 #custom-exit,
+#window,
 #tray,
 #custom-updates,
 #inhibitor,
@@ -78,7 +79,7 @@ button:hover {
 
 #tray {
 background-color: transparent;
-border: 10px solid transparent;
+border: 5px solid transparent;
 }
 
 #inhibitor {
