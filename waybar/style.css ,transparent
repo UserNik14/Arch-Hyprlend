@@ -103,7 +103,7 @@ color: @pink;
 }
 
 #custom-apps {
-  color: @pink;
+  color: #f0bbeb;
 }
 
 
