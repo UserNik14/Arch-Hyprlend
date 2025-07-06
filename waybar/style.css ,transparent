@@ -34,7 +34,7 @@ button:hover {
 #workspaces button {
   padding: 0 5px;
   background-color: transparent;
-  color: @rosewater;
+  color: @teal;
 }
 
 #workspaces button:hover {
@@ -103,7 +103,7 @@ color: @pink;
 }
 
 #custom-apps {
-  color: @white;
+  color: @text;
 }
 
 
@@ -122,7 +122,7 @@ color: @pink;
 }
 
 #custom-exit {
-  color:@white;
+  color:@subtext0;
 
 }
 
