@@ -48,7 +48,7 @@
       "icon-size": 20,
       "tooltip": false,
       "rewrite": {
-        "": " Hyprland"
+        "": "💧 Hyprland"
       },
       "separate-outputs": true,
     },
