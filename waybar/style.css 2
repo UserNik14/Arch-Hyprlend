@@ -144,7 +144,7 @@ color: @pink;
 }
 
 #cpu {
-  color: @peach;
+  color: @pink;
 }
 
 #memory {
