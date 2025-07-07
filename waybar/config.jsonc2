@@ -77,7 +77,7 @@
 
 
     "cpu": {
-      "format": "🖥 {usage}%",
+      "format": "💻 {usage}%",
       "tooltip": true,
       "on-click": "kitty htop",
     },
