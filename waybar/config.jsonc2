@@ -58,7 +58,7 @@
       "format": "{icon}",
       "on-click": "activate",
       "format-icons": {
-        "active": "&#9898;",
+        "active": "&#9898;", ///&#11093;
         "default": "&#9679;"
       },
       "sort-by-number": true,
@@ -77,7 +77,7 @@
 
 
     "cpu": {
-      "format": "&#128187; {usage}%",
+      "format": "🖥 {usage}%",
       "tooltip": true,
       "on-click": "kitty htop",
     },
@@ -145,7 +145,7 @@
 
 
       "custom/apps": {
-        "format":"Apps ",
+        "format":"Apps",
       "tooltip": false,
       "on-click": "wofi",
       "on-click-right": "killall wofi",
@@ -180,7 +180,7 @@
 
 
     "hyprland/language": {
-    "format": "{short}",
+   "format": "{short}",
     "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
 
     },
