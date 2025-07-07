@@ -180,9 +180,7 @@
 
 
     "hyprland/language": {
-    ///"format": "{short}",
-    "format-en": "EN",
-    "format-ru": "RU",
+    "format": "{short}",
     "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
 
     },
