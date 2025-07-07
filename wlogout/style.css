@@ -13,7 +13,23 @@ button {
     background-color: rgba(30, 30, 46, 0);
     margin: 5px;
     transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    border-radius: 20px;
 }
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0px;
+}
+
+button:hover,
+button:focus-visible {
+    background-color: rgba(0, 0, 0, 0.486);
+    color: #ffffff;
+    background-size: 35%;
+    border-radius: 20px;
+    }
+
 
 button:hover {
     background-color: rgba(49, 50, 68, 0.1);
