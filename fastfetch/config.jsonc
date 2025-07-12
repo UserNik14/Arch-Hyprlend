@@ -3,6 +3,10 @@
     "logo": {
 
     },
+    "logo": {
+    "type": "none"
+
+    },
     "display": {
         "separator": "  "
     },
