@@ -58,7 +58,7 @@
       "format": "{icon}",
       "on-click": "activate",
       "format-icons": {
-        "active": "&#9898;", ///&#11093;
+        "active": "&#11093;", 
         "default": "&#9679;"
       },
       "sort-by-number": true,
