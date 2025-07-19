@@ -5,6 +5,7 @@
     },
     "logo": {
     "type": "none"
+   ///"source": "$HOME/.config/fastfetch/1.txt",
 
     },
     "display": {
