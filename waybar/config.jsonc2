@@ -89,7 +89,8 @@
 
     },
     "battery": {
-      "states": {
+       "interval": 5,
+       "states": {
         "warning": 30,
         "critical": 15
       },
@@ -98,6 +99,7 @@
       "format-charging": " {capacity}%",
       "format-plugged": " {capacity}%",
       "format-alt": "{time} {icon}",
+      "tooltip-format": "{timeTo} {power}w",
       "format-icons": ["", "", "", "", ""]
     },
 
