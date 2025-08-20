@@ -58,7 +58,7 @@
       "format": "{icon}",
       "on-click": "activate",
       "format-icons": {
-        "active": "&#11093;", 
+        "active": "&#11093;",
         "default": "&#9679;"
       },
       "sort-by-number": true,
@@ -88,7 +88,7 @@
 
 
     },
-    "battery": {
+       "battery": {
        "interval": 5,
        "states": {
         "warning": 30,
@@ -147,7 +147,7 @@
 
 
       "custom/apps": {
-        "format":"Apps",
+        "format":"",
       "tooltip": false,
       "on-click": "wofi",
       "on-click-right": "killall wofi",
