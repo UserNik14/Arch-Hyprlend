@@ -14,7 +14,7 @@ chsh
 
 ###sudo pacman -S thunar git waybar hyprpaper fish hyprlock blueberry fastfetch copyq cava kate pavucontrol bleachbit nwg-look thunar-volman pacman-contrib partitionmanager brightnessctl gthumb vlc ark gvfs kdeconnect timeshift ttf-font-awesome otf-font-awesome ttf-jetbrains-mono papirus-icon-theme qbittorrent hypridle networkmanager-openvpn unrar
 
-### yay -S wlogout google-chrome poweralertd
+### yay -S wlogout google-chrome poweralertd wttrbar
 
 
 ###шрифты
