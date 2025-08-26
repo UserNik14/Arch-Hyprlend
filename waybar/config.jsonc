@@ -217,7 +217,7 @@
     },
 
     "custom/bluetooth": {
-        "format" : "",
+        "format" : "",
 		"tooltip": false,
 		"on-click": "blueberry",
     },
