@@ -4,7 +4,9 @@
     "margin-top" : 5,
     "margin-left": 5,
     "margin-right": 5,
-    "height" : 41,
+    "height" : 50,
+    "spacing": 1,
+   "reload_style_on_change": true,
 
 
 
@@ -30,6 +32,7 @@
     "tray",
     "hyprland/language",
     "pulseaudio",
+    ///"pulseaudio#microphone",
     "backlight",
     "custom/bluetooth",
     "cpu",
@@ -59,8 +62,8 @@
       "format": "{icon}",
       "on-click": "activate",
       "format-icons": {
-        "active": "&#11093;",
-        "default": "&#9679;"
+      "active": "&#11093;",
+      "default": "&#9679;"
       },
       "sort-by-number": true,
       "persistent-workspaces": {
@@ -97,18 +100,20 @@
 
 
     "cpu": {
-      "format": "💻 {usage}%",
-      ///"format": "{usage}% <span font='Font Awesome 6 Free-Solid'>\uf2db</span>",
+      ///"format": "💻 {usage}%",
+      "format": " {usage:}%",
       "tooltip": true,
       "on-click": "kitty htop",
     },
 
 
     "memory": {
-      "format": "&#128190; {}%"
-
-
+      ///"format": "&#128190; {}%"
+      "format": " {:>2}%",
+      ///"format": "{:>2}%",
     },
+
+
        "battery": {
        "interval": 5,
        "states": {
@@ -126,23 +131,24 @@
 
 
     "network": {
-      "format-wifi": " {signalStrength}% ▼ Down:{bandwidthDownBytes} ▲ Up:{bandwidthUpBytes}",
+      ///"format-wifi": " {signalStrength}% ▼ Down:{bandwidthDownBytes} ▲ Up:{bandwidthUpBytes}",
+      "format-wifi": " {signalStrength}%  Down:{bandwidthDownBytes}  Up:{bandwidthUpBytes}",
       "format-ethernet": "{cidr}  Speed:{bandwidthDownBytes} {bandwidthUpBytes}",
       "tooltip-format": "{ifname} via {gwaddr} ",
       "format-linked": "{ifname} (No IP) ",
       "format-disconnected": " ⚠ ",
       "format-alt": "{ifname}: {ipaddr}/{cidr}/{essid}",
       "interval": 3,
-       //////
+      /////////󰾆///󰓅///󰾆
     },
 
-    "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": "",
-    "format-icons": {
-    "default": ["", "", ""]
-    },
-    "on-click": "pavucontrol"
+     "pulseaudio": {
+     "format": "{icon} {volume}%",
+     "format-muted": "",
+     "format-icons": {
+     "default": ["", "", ""]
+     },
+     "on-click": "pavucontrol"
   },
 
    /// "pulseaudio": {
@@ -167,25 +173,37 @@
      /// },
 
 
+     "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "  Muted",
+        "on-click": "pamixer --default-source -t",
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "scroll-step": 5
+    },
+
+
     "custom/exit": {
-        "format": "",
-        "on-click": "wlogout",
-        "on-click-right": "hyprlock",
-        "tooltip-format": "Left: Power menu\nRight: Lock screen"
+         "format": "",
+         "on-click": "wlogout",
+         "on-click-right": "hyprlock",
+         "tooltip-format": "Left: Power menu\nRight: Lock screen"
       },
 
 
       "custom/apps": {
         "format":"",
-      "tooltip": false,
-      "on-click": "wofi",
-      "on-click-right": "killall wofi",
+        "tooltip": false,
+        "on-click": "wofi",
+        "on-click-right": "killall wofi",
     },
 
 
     "disk": {
         "interval": 30,
-        "format": "&#128191; {percentage_used}%", ///⛁
+        ///"format": "&#128191; {percentage_used}%",
+        "format": "󰋊 {percentage_used:>2}%",
         "path": "/",
 
     },
@@ -200,29 +218,30 @@
     },
 
 
-    "backlight": {
-	"interval": 2,
-	"align": 0,
-	"rotate": 0,
-	"format": "{icon} {percent}%",
+     "backlight": {
+	   "interval": 2,
+	   "align": 0,
+	   "rotate": 0,
+	   "format": "{icon} {percent}%",
 	///"format-icons": ["󰃞 ", "󰃟 ", "󰃝 ", "󰃠 "],
-	"format-icons": ["💡"],
-	"tooltip": false,
+    ///"format-icons": ["💡"],
+    "format-icons": [ "", "", "", "", "", "", "", "", ""],
+	    "tooltip": false,
     },
 
 
     "hyprland/language": {
-   "format": "{short}",
+    "format": "{short}",
     "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
 
     },
 
 
-    "custom/copyq": {
-        "format": "",
-        "on-click": "copyq show",
-        "tooltip": true,
-    },
+    ///"custom/copyq": {
+        ///"format": "",
+        ///"on-click": "copyq show",
+        ///"tooltip": true,
+    ///},
 
     "custom/bluetooth": {
         "format" : "",
@@ -234,21 +253,22 @@
         "icon-size": 21,
         "spacing": 10,
         "tooltip": false,
+        "show-passive-items": false,
     },
 
 
     "custom/cava_mviz": {
-	"exec": "$HOME/.config/waybar/WaybarCava.sh",
-	"format": "  {}",
-    "on-click": "kitty cava"
-	},
+	  "exec": "$HOME/.config/waybar/WaybarCava.sh",
+	  "format": "  {}",
+      "on-click": "kitty cava"
+	 },
 
 
     "inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+        "activated": "",
+        "deactivated": ""
         }
     },
 
@@ -270,6 +290,50 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///"network#speed": {
+    ///"interval": 1,
+    ///"format": "{ifname}%%",
+    ///"format-wifi": " {bandwidthDownBytes}  {bandwidthUpBytes}",
+    ///"format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes} ",
+    ///"format-disconnected": "󰌙",
+    ///"tooltip-format": "{ipaddr}",
+    ///"format-linked": "󰈁 {ifname} (No IP)",
+    ///"tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+    ///"tooltip-format-ethernet": "{ifname} 󰌘",
+    ///"tooltip-format-disconnected": "󰌙 Disconnected",
+    ///"max-length": 16,
+    ///"min-length": 14,
+ /// },
 
 
   ///"custom/weather": {
