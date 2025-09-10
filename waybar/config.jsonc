@@ -110,7 +110,7 @@
     "memory": {
       ///"format": "&#128190; {}%"
       ///"format": " {:>2}%",
-      "format": " {:>2}%",
+     "format": " {:>2}%",
     },
 
 
@@ -132,7 +132,7 @@
 
     "network": {
       ///"format-wifi": " {signalStrength}% ▼ Down:{bandwidthDownBytes} ▲ Up:{bandwidthUpBytes}",
-      "format-wifi": " {signalStrength}%  Down:{bandwidthDownBytes}  Up:{bandwidthUpBytes}",
+      "format-wifi": " {signalStrength}%  {bandwidthDownBytes}  {bandwidthUpBytes}",
       "format-ethernet": "{cidr}  Speed:{bandwidthDownBytes} {bandwidthUpBytes}",
       "tooltip-format": "{ifname} via {gwaddr} ",
       "format-linked": "{ifname} (No IP) ",
@@ -259,8 +259,9 @@
 
     "custom/cava_mviz": {
 	  "exec": "$HOME/.config/waybar/WaybarCava.sh",
-	  "format": "  {}",
+	  "format": "{}",
       "on-click": "kitty cava"
+      ///🎵
 	 },
 
 
