@@ -133,6 +133,7 @@
       "format-disconnected": " ⚠ ",
       "format-alt": "{ifname}: {ipaddr}/{cidr}/{essid}",
       "interval": 3,
+       //////
     },
 
     "pulseaudio": {
