@@ -132,14 +132,14 @@
 
     "network": {
       ///"format-wifi": " {signalStrength}% ▼ Down:{bandwidthDownBytes} ▲ Up:{bandwidthUpBytes}",
-      "format-wifi": " {signalStrength}%  {bandwidthDownBytes}  {bandwidthUpBytes}",
+      "format-wifi": " {signalStrength}%  {bandwidthDownBytes}  {bandwidthUpBytes}",
       "format-ethernet": "{cidr}  Speed:{bandwidthDownBytes} {bandwidthUpBytes}",
       "tooltip-format": "{ifname} via {gwaddr} ",
       "format-linked": "{ifname} (No IP) ",
       "format-disconnected": " ⚠ ",
       "format-alt": "{ifname}: {ipaddr}/{cidr}/{essid}",
       "interval": 3,
-      /////////󰾆///󰓅///󰾆
+      /////////󰾆///󰓅///󰾆/////////
     },
 
      "pulseaudio": {
@@ -274,11 +274,12 @@
     },
 
     "custom/updates": {
-        "format": "🔄 {}",
+        "format": " {}",
         "exec": "checkupdates | wc -l",
         "interval": 3600,
         "on-click": "kitty -e yay -Syu",
         "signal": 8
+        //////🔄
     },
 
     "custom/weather": {
