@@ -203,7 +203,7 @@
     "disk": {
         "interval": 30,
         ///"format": "&#128191; {percentage_used}%",
-        "format": "󰋊 {percentage_used:>2}%",
+        "format": "󰋊 {percentage_used:}%",
         "path": "/",
 
     },
