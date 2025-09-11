@@ -133,7 +133,7 @@
     "network": {
       ///"format-wifi": " {signalStrength}% ▼ Down:{bandwidthDownBytes} ▲ Up:{bandwidthUpBytes}",
       "format-wifi": " {signalStrength}%  {bandwidthDownBytes}  {bandwidthUpBytes}",
-      "format-ethernet": "{cidr}  Speed:{bandwidthDownBytes} {bandwidthUpBytes}",
+      "format-ethernet": "󰈀  Speed:{bandwidthDownBytes} {bandwidthUpBytes}",
       "tooltip-format": "{ifname} via {gwaddr} ",
       "format-linked": "{ifname} (No IP) ",
       "format-disconnected": " ⚠ ",
