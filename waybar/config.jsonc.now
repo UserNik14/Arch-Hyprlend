@@ -1,0 +1,417 @@
+{
+  "layer": "top",
+  "position": "top",
+    "margin-top" : 5,
+    "margin-left": 5,
+    "margin-right": 5,
+    "height" : 40,
+    "spacing": 0,
+   "reload_style_on_change": true,
+
+
+
+    "modules-left": [
+    "custom/apps",
+    "hyprland/workspaces",
+    "custom/updates",
+    "custom/weather",
+    "group/2",
+    "hyprland/window",
+    ],
+
+
+    "modules-center": [
+
+      ///"wlr/taskbar",
+      "inhibitor",
+      "custom/cava_mviz",
+      "custom/exit",
+      ],
+
+
+    "modules-right": [
+    "group/1",
+     "group/3",
+    "hyprland/language",
+    "custom/bluetooth",
+    "pulseaudio",
+    ///"pulseaudio#microphone",
+    "backlight",
+    "clock",
+    ],
+
+
+    "hyprland/window": {
+      "format": "{title}",
+      "max-length": 35,
+      "icon": true,
+      "icon-size": 20,
+      "tooltip": false,
+      "rewrite": {
+        "": "💧 Hyprland"
+      },
+      "separate-outputs": true,
+    },
+
+
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "on-click": "activate",
+      "format-icons": {
+      "active": "&#11093;",
+      "default": "&#9679;"
+      },
+      "sort-by-number": true,
+      "persistent-workspaces": {
+        "*": 5, // 5 workspaces by default on every monitor
+        "HDMI-A-1": 3 // but only three on HDMI-A-1
+      },
+    },
+
+  //"hyprland/workspaces": {
+  //   "all-outputs": true,
+  //   "active-only": false,
+  //   "on-scroll-up": "hyprctl dispatch workspace e+1",
+  //   "on-scroll-down": "hyprctl dispatch workspace e-1",
+  //   "format": "{icon}",
+  //   "format-icons": {
+  //     "active": "󰮯",
+  //     "default": "󰊠",
+  //     "special": "S"
+  //   },
+  //   "persistent-workspaces": {
+  //     "*": 4
+  //   },
+  //   "on-click": "activate",
+  //   "on-scroll-up": "hyprctl dispatch workspace e-1",
+  //   "on-scroll-down": "hyprctl dispatch workspace e+1"
+  // },
+
+
+    "clock": {
+      "format":" {:%H:%M}",
+      "tooltip-format": "<tt><small>{calendar}</small></tt>",
+      "format-alt": " {:%Y-%m-%d}"
+    },
+
+
+    "cpu": {
+      ///"format": "💻 {usage}%",
+      "format": " {usage:}%",
+      "tooltip": true,
+      "on-click": "kitty htop",
+    },
+
+
+    "memory": {
+      ///"format": "&#128190; {}%"
+      ///"format": " {:>2}%",
+     "format": " {}%",
+    },
+
+
+       "battery": {
+       "interval": 5,
+       "states": {
+        "warning": 30,
+        "critical": 15
+      },
+      "format": "{icon} {capacity}%",
+      "format-full": "{icon} {capacity}%",
+      "format-charging": " {capacity}%",
+      "format-plugged": " {capacity}%",
+      "format-alt": "{time} {icon}",
+      "tooltip-format": "{timeTo} {power}w",
+      "format-icons": ["", "", "", "", ""]
+    },
+
+
+    "network": {
+      ///"format-wifi": " {signalStrength}% ▼ Down:{bandwidthDownBytes} ▲ Up:{bandwidthUpBytes}",
+      "format-wifi": " {signalStrength}%  {bandwidthDownBytes}  {bandwidthUpBytes}",
+      "format-ethernet": "󰈀   {bandwidthDownBytes}  {bandwidthUpBytes}",
+      "tooltip-format": "{ifname} via {gwaddr} ",
+      "format-linked": "{ifname} (No IP) ",
+      "format-disconnected": " ⚠ ",
+      "format-alt": "{ifname}: {ipaddr}/{cidr}/{essid}",
+      "interval": 3,
+      /////////󰾆///󰓅///󰾆/////////
+    },
+
+     "pulseaudio": {
+     "format": "{icon} {volume}%",
+     "format-muted": "",
+     "format-icons": {
+     "default": ["", "", ""]
+     },
+     "on-click": "pavucontrol"
+  },
+
+   /// "pulseaudio": {
+        ///"scroll-step": 1, // %, can be a float
+        ///"format": " {icon} {volume}% {format_source}",
+        ///"format-bluetooth": "{volume}% {icon} {format_source}",
+        ///"format-bluetooth-muted": " {icon} {format_source}",
+        /// "format-muted": " {format_source}",
+        ///"format-source": " {volume}%",
+        ///"format-source-muted": "",
+        ///"format-icons": {
+        /// "headphone": "",
+        /// "hands-free": "",
+        /// "headset": "",
+        /// "phone": "",
+        ///"portable": "",
+        /// "car": "",
+        /// "default": ["", "", ""]
+       /// },
+       /// "on-click": "pavucontrol"
+
+     /// },
+
+
+     "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "  Muted",
+        "on-click": "pamixer --default-source -t",
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "scroll-step": 5
+    },
+
+
+    "custom/exit": {
+         "format": "",
+         "on-click": "wlogout",
+         "on-click-right": "hyprlock",
+         "tooltip-format": "Left: Power menu\nRight: Lock screen"
+      },
+
+
+      "custom/apps": {
+        "format":"",
+        "tooltip": false,
+        "on-click": "wofi",
+        "on-click-right": "killall wofi",
+    },
+
+
+    "disk": {
+        "interval": 30,
+        ///"format": "&#128191; {percentage_used}%",
+        "format": "󰋊 {percentage_used:}%",
+        "path": "/",
+
+    },
+
+
+    "temperature": {
+        "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+
+
+     "backlight": {
+	   "interval": 2,
+	   "align": 0,
+	   "rotate": 0,
+	   "format": "{icon} {percent}%",
+	///"format-icons": ["󰃞 ", "󰃟 ", "󰃝 ", "󰃠 "],
+    ///"format-icons": ["💡"],
+    "format-icons": [ "", "", "", "", "", "", "", "", ""],
+	    "tooltip": false,
+    },
+
+
+    "hyprland/language": {
+    "format": "{short}",
+    "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+
+    },
+
+
+    ///"custom/copyq": {
+        ///"format": "",
+        ///"on-click": "copyq show",
+        ///"tooltip": true,
+    ///},
+
+    "custom/bluetooth": {
+        "format" : "",
+		"tooltip": false,
+		"on-click": "blueberry",
+    },
+
+     "tray": {
+        "icon-size": 21,
+        "spacing": 10,
+        "tooltip": false,
+        "show-passive-items": false,
+    },
+
+
+    "custom/cava_mviz": {
+	  "exec": "$HOME/.config/waybar/WaybarCava.sh",
+	  "format": "{}",
+      "on-click": "kitty cava"
+      ///🎵
+	 },
+
+
+    "inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+        "activated": "",
+        "deactivated": ""
+        }
+    },
+
+    "custom/updates": {
+        "format": " {}",
+        "exec": "checkupdates | wc -l",
+        "interval": 3600,
+        "on-click": "kitty -e yay -Syu",
+        "signal": 8
+        //////🔄
+    },
+
+    "custom/weather": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 1800,
+        "exec": "$HOME/.config/waybar/wttr.py",
+        "return-type": "json"
+    },
+
+
+
+    "group/1": {
+	   "orientation": "horizontal",
+	   "drawer": {
+		"transition-duration": 500,
+		"transition-left-to-right": false,
+		"children-class": "not-power",
+        "click-to-reveal": true
+	},
+	"modules": [
+		  "custom/group1",
+		  "tray",
+	]
+
+   },
+
+
+   "custom/group1": {
+	   "format": "📎",
+	   "tooltip-format": "Tray",
+   } ,
+
+
+
+    "group/2": {
+	   "orientation": "horizontal",
+	   "drawer": {
+		"transition-duration": 500,
+		"transition-left-to-right": true,
+		"children-class": "not-power",
+        "click-to-reveal": true
+	},
+	"modules": [
+		  "custom/group2",
+		  "network",
+	]
+   },
+
+   "custom/group2": {
+	   "format": "📡",
+	   "tooltip-format": "WI-FI",
+   } ,
+
+
+
+   "group/3": {
+	   "orientation": "horizontal",
+	   "drawer": {
+		"transition-duration": 500,
+		"transition-left-to-right": false,
+		"children-class": "not-power",
+        "click-to-reveal": true
+	},
+	"modules": [
+		  "custom/group3",
+		  "cpu",
+		  "memory",
+		  "disk",
+		  "temperature",
+		  "battery",
+		  ]
+
+   },
+
+   "custom/group3": {
+	   "format": "💻",
+	   "tooltip-format": "Hardware",
+   } ,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///"network#speed": {
+    ///"interval": 1,
+    ///"format": "{ifname}%%",
+    ///"format-wifi": " {bandwidthDownBytes}  {bandwidthUpBytes}",
+    ///"format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes} ",
+    ///"format-disconnected": "󰌙",
+    ///"tooltip-format": "{ipaddr}",
+    ///"format-linked": "󰈁 {ifname} (No IP)",
+    ///"tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+    ///"tooltip-format-ethernet": "{ifname} 󰌘",
+    ///"tooltip-format-disconnected": "󰌙 Disconnected",
+    ///"max-length": 16,
+    ///"min-length": 14,
+ /// },
+
+
+  ///"custom/weather": {
+  /// "format": "{}°C",
+  /// "tooltip": false,
+  /// "interval": 3600,
+  ///  "exec": "wttrbar --location 'Rostov-on-Don'",
+  ///"return-type": "json"
+  /// },
+
+  ///"wlr/taskbar": {
+  ///"format": "{icon}",
+  ///"icon-size": 18,
+  ///"on-click-middle": "close",
+  ///"tooltip-format": "{title}",
+  /// "ignore-list": [],
+  /// "on-click": "activate"
+  ///},
+
+
+
+}
