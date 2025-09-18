@@ -1,0 +1,99 @@
+function fish_prompt
+
+    set -l retc brblack
+    test $status = 0; and set retc bryellow
+
+    #set -l arrowCol brred
+    #test $status = 0; and set retc brblack
+
+
+    set -q __fish_git_prompt_showupstream
+    or set -g __fish_git_prompt_showupstream auto
+
+    function _nim_prompt_wrapper
+        set retc $argv[1]
+        set cust $argv[4]
+        set field_name $argv[2]
+        set field_value $argv[3]
+
+        set_color normal
+        set_color $retc
+        echo
+        echo -n ' ├─'
+
+        set_color -o bryellow
+        echo -n '[ '
+
+        set_color normal
+        test -n $field_name
+        and echo -n $field_name
+
+        set_color -o brblack
+        echo -n ' ▶ '
+
+        set_color $retc
+        set_color $cust
+        echo -n $field_value
+
+        set_color -o bryellow
+        echo -n ' ]'
+    end
+
+    set_color $retc
+    echo -n '─┬─'
+
+    set_color -o bryellow
+    echo -n '[ '
+
+    set_color -o red
+    echo -n (prompt_hostname)
+    echo -n ': '
+
+    if test "$USER" = root -o "$USER" = toor
+        set_color -o brred
+    else
+        set_color -o brwhite
+    end
+    echo -n $USER
+
+    set_color -o brblack
+    echo -n ' ▶ '
+
+    set_color -o brcyan
+    echo -n (pwd)
+
+    set_color -o bryellow
+    echo -n ' ]'
+
+    # Virtual Environment
+    set -q VIRTUAL_ENV_DISABLE_PROMPT
+    or set -g VIRTUAL_ENV_DISABLE_PROMPT true
+    set -q VIRTUAL_ENV
+    and _nim_prompt_wrapper $retc 🐍 (basename "$VIRTUAL_ENV") cyan
+
+    # git
+    set prompt_git (fish_git_prompt | string trim -c ' ()')
+    test -n "$prompt_git"
+    and _nim_prompt_wrapper $retc (basename $PWD) $prompt_git
+
+    # Battery status
+    type -q acpi
+    and test (acpi -a 2> /dev/null | string match -r off)
+    and _nim_prompt_wrapper $retc B (acpi -b | cut -d' ' -f 4-)
+
+    # New line
+    echo
+
+    # Background jobs
+    set_color normal
+    for job in (jobs)
+        set_color $retc
+        echo -n ' │ '
+        set_color brown
+        echo $job
+    end
+    set_color normal
+    set_color $retc
+    echo -n ' ╰─> '
+    set_color normal
+end
