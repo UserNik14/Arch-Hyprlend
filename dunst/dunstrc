@@ -23,21 +23,21 @@
     max_icon_size = 120
 
 [style normal]
-    background = "#1e1e2e"
+    background = "#323247"
     foreground = "#cdd6f4"
     highlight = "#f38ba8"
     default_icon = dialog-information
 
 
 [style critical]
-    background = "#1e1e2e"
+    background = "#323247"
     foreground = "#f38ba8"
     highlight = "#f5e0dc"
    default_icon = dialog-information
 
 
 [style low]
-    background = "#1e1e2e"
+    background = "#323247"
     foreground = "#bac2de"
    default_icon = dialog-information
 
