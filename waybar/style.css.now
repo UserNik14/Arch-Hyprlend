@@ -20,14 +20,11 @@ window#waybar {
 /* Modules styling */
 #workspaces,
 #taskbar,
-#custom-group1,
 #custom-group2,
-#custom-group3,
 #network,
 #custom-apps,
 #custom-exit,
 #window,
-#tray,
 #clock,
 #custom-updates,
 #inhibitor,
@@ -45,17 +42,9 @@ font-weight: 500;
 }
 
 
-#cpu {
-margin: 5px 0px;
-padding: 5px 0px;
-border-radius: 12px;
-font-size: 18px;
-background: rgba (36, 39, 58,0.6);
-border-radius: 13px 0px 0px 13px;
-margin-left: 3px;
-padding-right: 0px;
-}
-
+#tray,
+#cpu,
+#battery,
 #disk,
 #temperature,
 #memory {
@@ -68,18 +57,6 @@ border-radius: 0px 0px 0px 0px;
 margin-right: 0px;
 padding-right: 0px;
 }
-
-#battery {
-margin: 5px 0px;
-padding: 5px 0px;
-border-radius: 13px;
-font-size: 18px;
-background: rgba (36, 39, 58,0.6);
-border-radius: 0px 13px 13px 0px;
-margin-right: 3px;
-padding-right: 0px;
-}
-
 
 
 
@@ -129,6 +106,39 @@ border-radius: 0px 13px 12px 0px;
 margin-right: 2px;
 padding-right: 0px;
 }
+
+
+
+#custom-group1 {
+margin: 5px 0px;
+padding: 5px 0px;
+border-radius: 13px;
+font-size: 24px;
+background: rgba (36, 39, 58,0.6);
+border-radius: 13px 0px 0px 13px;
+margin-left: 3px;
+padding-right: 0px;
+}
+
+#custom-group3 {
+margin: 5px 0px;
+padding: 5px 0px;
+border-radius: 13px;
+font-size: 24px;
+background: rgba (36, 39, 58,0.6);
+border-radius: 0px 13px 12px 0px;
+margin-right: 2px;
+padding-right: 0px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -182,7 +192,7 @@ button:hover {
 
 
 pulseaudio:hover {
-background-color: transparent;
+  background-color: transparent;
 }
 
 #workspaces button {
@@ -192,13 +202,13 @@ color: @rosewater;
 }
 
 workspaces button.active {
-background-color: #64727D;
-border-radius: 7px;
+  background-color: #64727D;
+  border-radius: 7px;
 }
 
 #workspaces button:hover {
-  background: transparent;;
-  box-shadow: none;
+background: transparent;;
+box-shadow: none;
 }
 #workspaces button.focused {
 background-color: @rosewater;
@@ -211,42 +221,22 @@ background-color: #eb4d4b;
 
 
 #workspaces button:not(.active) {
- color: #74c7ec;
- }
- #workspaces button:nth-child(1):not(.active) {
- color: #f38ba8;
- }
- #workspaces button:nth-child(2):not(.active) {
- color: #f9e2af;
- }
- #workspaces button:nth-child(3):not(.active) {
- color: @pink;
- }
- #workspaces button:nth-child(4):not(.active) {
- color: @teal;
- }
- #workspaces button:nth-child(5):not(.active) {
- color: @peach;
- }
-
-
-
-
-
-
-
-
-
- #custom-group1 {
- color: @pink;
- }
-
- #custom-group2 {
-   color: @yellow;
+color: #74c7ec;
 }
-
- #custom-group3 {
-   color: @mauve;
+#workspaces button:nth-child(1):not(.active) {
+color: #f38ba8;
+}
+#workspaces button:nth-child(2):not(.active) {
+color: #f9e2af;
+}
+#workspaces button:nth-child(3):not(.active) {
+color: @pink;
+}
+#workspaces button:nth-child(4):not(.active) {
+color: @teal;
+}
+#workspaces button:nth-child(5):not(.active) {
+color: @peach;
 }
 
 
@@ -256,14 +246,37 @@ background-color: #eb4d4b;
 
 
 
- #mode {
- background-color: #64727d;
- box-shadow: inset 0 -3px #ffffff;
- }
+
+#custom-group1 {
+color: @teal;
+font-size: 24px
+}
+
+#custom-group2 {
+color: @yellow;
+font-size: 24px
+}
+
+#custom-group3 {
+color: @mauve;
+font-size: 24px
+}
+
+
+
+
+
+
+
+
+#mode {
+background-color: #64727d;
+box-shadow: inset 0 -3px #ffffff;
+}
 
 #tray {
 background-color: rgba (36, 39, 58, 0.6);
-border: 5px solid transparent;
+border: 0px solid transparent;
 }
 
 #inhibitor {
@@ -288,6 +301,7 @@ color: @yellow;
 
 #custom-apps {
 color: @teal;
+font-size: 25px
 }
 
 
