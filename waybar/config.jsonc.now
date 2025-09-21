@@ -48,7 +48,7 @@
       "icon-size": 20,
       "tooltip": false,
       "rewrite": {
-        "": "💧 Hyprland"
+        "": "󰌁 Hyprland"
       },
       "separate-outputs": true,
     },
@@ -58,7 +58,7 @@
       "format": "{icon}",
       "on-click": "activate",
       "format-icons": {
-      "active": "&#11093;",
+      "active": "󰄰",
       "default": "&#9679;"
       },
       "sort-by-number": true,
@@ -247,7 +247,7 @@
 
      "tray": {
         "icon-size": 21,
-        "spacing": 10,
+        "spacing": 3,
         "tooltip": false,
         "show-passive-items": false,
     },
@@ -281,10 +281,10 @@
     "custom/weather": {
         "format": "{}",
         "tooltip": true,
-        "interval": 1800,
+       "interval": 1800,
         "exec": "$HOME/.config/waybar/wttr.py",
         "return-type": "json"
-    },
+   },
 
 
 
@@ -292,7 +292,7 @@
 	   "orientation": "horizontal",
 	   "drawer": {
 		"transition-duration": 500,
-		"transition-left-to-right": false,
+		"transition-left-to-right": true,
 		"children-class": "not-power",
         "click-to-reveal": true
 	},
@@ -305,7 +305,7 @@
 
 
    "custom/group1": {
-	   "format": "📎",
+	   "format": "󰹯",
 	   "tooltip-format": "Tray",
    } ,
 
@@ -326,7 +326,7 @@
    },
 
    "custom/group2": {
-	   "format": "📡",
+	   "format": "󰓅",
 	   "tooltip-format": "WI-FI",
    } ,
 
@@ -352,7 +352,7 @@
    },
 
    "custom/group3": {
-	   "format": "💻",
+	   "format": "",
 	   "tooltip-format": "Hardware",
    } ,
 
@@ -396,10 +396,10 @@
 
 
   ///"custom/weather": {
-  /// "format": "{}°C",
-  /// "tooltip": false,
-  /// "interval": 3600,
-  ///  "exec": "wttrbar --location 'Rostov-on-Don'",
+  ///"format": "{}°C",
+   ///"tooltip": true,
+   ///"interval": 1800,
+  /// "exec": "wttrbar --location 'Rostov-on-Don'",
   ///"return-type": "json"
   /// },
 
