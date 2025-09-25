@@ -247,7 +247,7 @@
 
      "tray": {
         "icon-size": 21,
-        "spacing": 3,
+        "spacing": 8,
         "tooltip": false,
         "show-passive-items": false,
     },
