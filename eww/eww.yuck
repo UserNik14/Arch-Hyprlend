@@ -1,0 +1,70 @@
+
+(defpoll minute
+    :interval "1s"
+    "date '+%M'"
+)
+
+(defpoll hour
+    :interval "1s"
+    "date '+%H'"
+)
+
+
+(defwidget monolith []
+    (box
+        :orientation "h"
+        (fancy-clock)
+    )
+)
+
+
+(defwidget fancy-clock []
+    (box
+        :class "fancy-clock"
+        :orientation "v"
+        :valign "center"
+        :spacing 0
+        :space-evenly false
+        (label :text "${hour}" :class "hour")
+        (label :text "${minute}" :class "minute")
+    )
+)
+
+(defwindow clock
+    :class "clock-window"
+    :monitor 0
+    :geometry (geometry
+        :x "30px"
+                      :y "200px"
+                      :width "100px"
+                      :height "200px"
+                      :anchor "top center")
+
+    :stacking "bg"
+    :windowtype "dock"
+    (monolith)
+)
+
+
+
+
+
+(defwindow smalldate
+  :wm-ignore: false
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "200px"
+                      :y "430px"
+                      :width "100px"
+                      :height "100px"
+                      :anchor "bottom center")
+                      :stacking "bg"
+(smalldate))
+
+(defwidget smalldate []
+(label :class "small-date" :valign "center" :halign "center" :text TODAY))
+
+(defpoll TODAY :interval "1s" `date +'%A'
+date +' %d %B'`)
+
+
