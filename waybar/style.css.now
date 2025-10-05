@@ -276,7 +276,7 @@ color: @peach;
 
 #custom-group1 {
 color: @teal;
-font-size: 24px
+font-size: 23px
 }
 
 #custom-group2 {
@@ -286,7 +286,7 @@ font-size: 24px
 
 #custom-group3 {
 color: @mauve;
-font-size: 24px
+font-size: 22px
 }
 
 
