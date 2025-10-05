@@ -54,7 +54,7 @@
   :monitor 0
   :windowtype "dock"
   :geometry (geometry :x "200px"
-                      :y "430px"
+                      :y "400px"
                       :width "100px"
                       :height "100px"
                       :anchor "bottom center")
