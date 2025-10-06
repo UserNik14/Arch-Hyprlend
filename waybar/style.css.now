@@ -13,12 +13,8 @@ window#waybar {
   border: none;
   transition-property: background-color;
   transition-duration: 0.5s;
+
 }
-
-
-
-
-
 
 
 /*#waybar > box {
@@ -27,9 +23,11 @@ window#waybar {
  box-shadow: 0 0 5 2px @pink;
  transition-property: background-color;
  transition-duration: .5s;
+
+
+
  box-shadow: inset 0 0 2px 2px @bordershadow
 }*/
-
 
 
 
@@ -65,7 +63,6 @@ font-size: 18px;
 color: transparent;
 background: rgba (36, 39, 58, 0.6);
 font-weight: 500;
-
 }
 
 
@@ -276,12 +273,12 @@ color: @peach;
 
 #custom-group1 {
 color: @teal;
-font-size: 23px
+font-size: 21px
 }
 
 #custom-group2 {
 color: @yellow;
-font-size: 24px
+font-size: 23px
 }
 
 #custom-group3 {
