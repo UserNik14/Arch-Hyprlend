@@ -274,6 +274,7 @@
         "exec": "checkupdates | wc -l",
         "interval": 3600,
         "on-click": "kitty -e yay -Syu",
+        "on-click-right": "kitty -e sudo pacman -Syu",
         "signal": 8
         //////🔄
     },
