@@ -306,7 +306,7 @@
 
 
    "custom/group1": {
-	   "format": "󰹯",
+	   "format": "",
 	   "tooltip-format": "Tray",
    } ,
 
@@ -327,7 +327,7 @@
    },
 
    "custom/group2": {
-	   "format": "󰓅",
+	   "format": "",
 	   "tooltip-format": "WI-FI",
    } ,
 
@@ -353,7 +353,7 @@
    },
 
    "custom/group3": {
-	   "format": "",
+	   "format": "",
 	   "tooltip-format": "Hardware",
    } ,
 
