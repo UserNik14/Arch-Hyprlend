@@ -282,7 +282,7 @@ font-size: 18px
 }
 
 #custom-group3 {
-color: @mauve;
+color: @red;
 font-size: 23px
 }
 
