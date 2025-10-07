@@ -273,17 +273,17 @@ color: @peach;
 
 #custom-group1 {
 color: @teal;
-font-size: 21px
+font-size: 20px
 }
 
 #custom-group2 {
 color: @yellow;
-font-size: 23px
+font-size: 22px
 }
 
 #custom-group3 {
 color: @mauve;
-font-size: 22px
+font-size: 23px
 }
 
 
