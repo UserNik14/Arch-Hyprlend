@@ -63,8 +63,7 @@
 
 (defwidget smalldate []
 (label :class "small-date" :valign "center" :halign "center" :text TODAY))
+(defpoll TODAY :interval "1s" `date +'%A %d %B'`)
 
-(defpoll TODAY :interval "1s" `date +'%A'
-date +' %d %B'`)
 
 
