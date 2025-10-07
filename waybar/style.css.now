@@ -299,7 +299,7 @@ box-shadow: inset 0 -3px #ffffff;
 }
 
 #tray {
-background-color: rgba (36, 39, 58, 0.6);
+background-color: rgba (36, 39, 58, 0.4);
 border: 0px solid transparent;
 }
 
