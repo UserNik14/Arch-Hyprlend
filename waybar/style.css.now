@@ -60,7 +60,6 @@ margin: 5px 1px;
 padding: 5px 3px;
 border-radius: 13px;
 font-size: 18px;
-color: transparent;
 background: rgba (36, 39, 58, 0.5);
 font-weight: 500;
 }
