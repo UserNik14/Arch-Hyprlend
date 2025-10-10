@@ -63,7 +63,37 @@
 
 (defwidget smalldate []
 (label :class "small-date" :valign "center" :halign "center" :text TODAY))
+
 (defpoll TODAY :interval "1s" `date +'%A %d %B'`)
+
+
+
+
+
+
+
+
+
+;; Uptime vars
+(defpoll UPHOUR :interval "5s" `uptime -p | awk '{print $2 \" \" $3}' | sed 's/,//g'`)
+(defpoll UPMIN :interval "5s" `uptime -p | awk '{print $4 \" \" $5}'`)
+
+
+;; uptime
+(defwidget uptime []
+	(box :class "genwin"
+		(box :orientation "h" :halign "center" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false"
+			(label :class "icontimer" :valign "center" :text "󰄉")
+			(box :orientation "h" :valign "center" :spacing 10 :space-evenly "false" :vexpand "false" :hexpand "false"
+				(label :class "uphour" :halign "start" :wrap "true" :limit-width 25 :text UPHOUR)
+				(label :class "upmin" :halign "start" :wrap "true" :limit-width 25 :text UPMIN)))))
+
+
+
+;; uptime
+(defwindow uptime :stacking "bg" :focusable "false" :monitor 0
+	    :geometry (geometry :x 1550 :y 320 :width 350 :height 1330)
+					(uptime))
 
 
 
