@@ -63,15 +63,25 @@ font-weight: 500;
 }
 
 #custom-apps {
+  margin: 5px 2px;
   margin-left: 10px;
   margin-right: 2px;
+  padding: 5px 3px;
   border-radius: 10px;
+  font-size: 18px;
+  background: rgba (36, 39, 58, 0.5);
+  font-weight: 500;
 }
 
 #clock {
+margin: 5px 2px;
 margin-left: 2px;
 margin-right: 10px;
+padding: 5px 3px;
 border-radius: 10px;
+font-size: 18px;
+background: rgba (36, 39, 58, 0.5);
+font-weight: 500;
 }
 
 
