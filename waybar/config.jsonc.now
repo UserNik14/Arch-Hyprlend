@@ -35,7 +35,7 @@
     "hyprland/language",
     "custom/bluetooth",
     "pulseaudio",
-    ///"pulseaudio#microphone",
+    "wireplumber",
     "backlight",
     "clock",
     ],
@@ -96,7 +96,6 @@
 
 
     "cpu": {
-      ///"format": "💻 {usage}%",
       "format": " {usage:}%",
       "tooltip": true,
       "on-click": "kitty htop",
@@ -127,7 +126,6 @@
 
 
     "network": {
-      ///"format-wifi": " {signalStrength}% ▼ Down:{bandwidthDownBytes} ▲ Up:{bandwidthUpBytes}",
       "format-wifi": " {signalStrength}%  {bandwidthDownBytes}  {bandwidthUpBytes}",
       "format-ethernet": "󰈀   {bandwidthDownBytes}  {bandwidthUpBytes}",
       "tooltip-format": "{ifname} via {gwaddr} ",
@@ -135,12 +133,11 @@
       "format-disconnected": " ⚠ ",
       "format-alt": "{ifname}: {ipaddr}/{cidr}/{essid}",
       "interval": 3,
-      /////////󰾆///󰓅///󰾆/////////
     },
 
      "pulseaudio": {
      "format": "{icon} {volume}%",
-     "format-muted": "",
+     "format-muted": "",
      "format-icons": {
      "default": ["", "", ""]
      },
@@ -163,16 +160,15 @@
         ///"portable": "",
         /// "car": "",
         /// "default": ["", "", ""]
-       /// },
+        /// },
        /// "on-click": "pavucontrol"
+       /// },
 
-     /// },
 
-
-     "pulseaudio#microphone": {
+     "wireplumber": {
         "format": "{format_source}",
         "format-source": " {volume}%",
-        "format-source-muted": "  Muted",
+        "format-source-muted": "",
         "on-click": "pamixer --default-source -t",
         "on-scroll-up": "pamixer --default-source -i 5",
         "on-scroll-down": "pamixer --default-source -d 5",
@@ -198,7 +194,6 @@
 
     "disk": {
         "interval": 30,
-        ///"format": "&#128191; {percentage_used}%",
         "format": "󰋊 {percentage_used:}%",
         "path": "/",
 
@@ -219,10 +214,8 @@
 	   "align": 0,
 	   "rotate": 0,
 	   "format": "{icon} {percent}%",
-	///"format-icons": ["󰃞 ", "󰃟 ", "󰃝 ", "󰃠 "],
-    ///"format-icons": ["💡"],
-    "format-icons": [ "", "", "", "", "", "", "", "", ""],
-	    "tooltip": false,
+       "format-icons": [ "", "", "", "", "", "", "", "", ""],
+       "tooltip": false,
     },
 
 
@@ -232,12 +225,6 @@
 
     },
 
-
-    ///"custom/copyq": {
-        ///"format": "",
-        ///"on-click": "copyq show",
-        ///"tooltip": true,
-    ///},
 
     "custom/bluetooth": {
         "format" : "",
@@ -257,7 +244,6 @@
 	  "exec": "$HOME/.config/waybar/WaybarCava.sh",
 	  "format": "{}",
       "on-click": "kitty cava"
-      ///🎵
 	 },
 
 
@@ -276,7 +262,6 @@
         "on-click": "kitty -e yay -Syu",
         "on-click-right": "kitty -e sudo pacman -Syu",
         "signal": 8
-        //////🔄
     },
 
     "custom/weather": {
