@@ -399,9 +399,11 @@ color: @sky;
 color: @green;
 }
 
+
 #clock {
-color: @flamingo;
+color: @lavender;
 }
+
 
 #cpu {
 color: @pink;
