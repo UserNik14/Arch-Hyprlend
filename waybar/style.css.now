@@ -55,7 +55,7 @@ window#waybar {
 #custom-weather {
 
 margin: 5px 2px;
-padding: 5px 3px;
+padding: 5px 5px;
 border-radius: 10px;
 font-size: 18px;
 background: rgba (36, 39, 58, 0.5);
@@ -231,7 +231,7 @@ padding-right: 0px;
 #backlight,
 #wireplumber,
 #pulseaudio {
-padding: 0 5px;
+padding: 5px 5px;
 }
 
 
