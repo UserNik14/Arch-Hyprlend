@@ -207,6 +207,7 @@ padding-right: 0px;
 
 
 #workspaces,
+#clock,
 #taskbar,
 #battery,
 #custom-group1,
