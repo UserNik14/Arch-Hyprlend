@@ -1,0 +1,56 @@
+* {
+  all: unset;
+}
+
+* {
+  font-size: 32px;
+  font-family: "Midorima-Personal Use";
+
+}
+
+.minute {
+  font-size: 170px;
+  color: #a485dd;
+}
+
+.hour {
+  font-size: 170px;
+  color: #f5bde6;
+}
+
+.second {
+  font-size: 50px;
+  color: #ed8796;
+}
+
+.small-date {
+
+  font-size: 35px;
+  color: #ed8796;
+}
+
+
+
+/** Uptime ********************************************/
+.icontimer {
+  color: #ed8796;
+
+  font-weight : bold;
+  font-size: 30px;
+
+}
+
+.uphour {
+  color: #f5bde6;
+  font-size : 25px;
+
+
+}
+
+.upmin {
+  color: #a485dd; //#D46389; //#8FBCBB;
+  font-size : 25px;
+
+
+}
+
