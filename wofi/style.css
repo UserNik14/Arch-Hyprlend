@@ -20,7 +20,7 @@ border: 0;
 border-radius: 1em;
 color: @text;
 font-size: 1rem;
-background-color: #@base
+background-color: #@base;
 color: #c0caf5;
 }
 
