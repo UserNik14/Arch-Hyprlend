@@ -315,7 +315,7 @@ font-size: 18px
 }
 
 #custom-group3 {
-color: @red;
+color: @text;
 font-size: 20px
 }
 
@@ -348,7 +348,7 @@ color: @green;
 color: @maroon;
 }
 #wireplumber {
-  color:@maroon;
+color:@pink;
 }
 
 #custom-cava_mviz {
@@ -479,4 +479,3 @@ animation-direction: alternate;
 label:focus {
   background-color: #000000;
 }
-
