@@ -103,8 +103,6 @@
 
 
     "memory": {
-      ///"format": "&#128190; {}%"
-      ///"format": " {:>2}%",
      "format": " {}%",
     },
 
@@ -264,11 +262,12 @@
         "signal": 8
     },
 
+
     "custom/weather": {
         "format": "{}",
         "tooltip": true,
-       "interval": 1800,
-        "exec": "$HOME/.config/waybar/wttr.py",
+       "interval": 600,
+        "exec": "$HOME/.config/waybar/wttr.sh",
         "return-type": "json"
    },
 
@@ -312,8 +311,9 @@
    },
 
    "custom/group2": {
-	   "format": "",
+	   "format": "󱌑",
 	   "tooltip-format": "WI-FI",
+	   ///
    } ,
 
 
@@ -338,11 +338,10 @@
    },
 
    "custom/group3": {
-	   "format": "",
+	   "format": "",
 	   "tooltip-format": "Hardware",
+	   ///
    } ,
-
-
 
 
 
@@ -385,9 +384,9 @@
   ///"format": "{}°C",
    ///"tooltip": true,
    ///"interval": 1800,
-  /// "exec": "wttrbar --location 'Rostov-on-Don'",
+   ///"exec": "wttrbar --location 'Rostov-on-Don'",
   ///"return-type": "json"
-  /// },
+   ///},
 
   ///"wlr/taskbar": {
   ///"format": "{icon}",
